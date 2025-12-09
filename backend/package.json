@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4a3wa^5.2.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
