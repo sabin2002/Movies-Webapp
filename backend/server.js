@@ -90,10 +90,10 @@ app.get('/api/movies', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch movies' });
   }
 });
-
+//...........add............
 // Add a new movie (supports image from file upload or from link)
 app.post('/api/movies', upload.single('image'), async (req, res) => {
-  // I take these values from the formData / JSON body
+  // I tagitke these values from the formData / JSON body
   // imageUrlLink is for when user types a URL instead of uploading file
   const { name, type, rating, imageUrlLink } = req.body;
 
@@ -137,7 +137,10 @@ app.post('/api/movies', upload.single('image'), async (req, res) => {
     res.status(500).json({ error: 'Failed to add movie' });
   }
 });
+//..............................
 
+
+//UPDATE............................
 // Update a movie (also supports new image file or new link)
 app.put('/api/movies/:id', upload.single('image'), async (req, res) => {
   // I get the id from URL parameter /api/movies/:id
@@ -183,7 +186,9 @@ app.put('/api/movies/:id', upload.single('image'), async (req, res) => {
     res.status(500).json({ error: 'Failed to update movie' });
   }
 });
+//........................................
 
+//DELETE..................................................
 // Delete a movie by id
 app.delete('/api/movies/:id', async (req, res) => {
   const { id } = req.params;
@@ -198,6 +203,7 @@ app.delete('/api/movies/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to delete movie' });
   }
 });
+//.....................................................
 
 // ====== START SERVER ======
 

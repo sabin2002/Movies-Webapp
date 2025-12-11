@@ -2,10 +2,10 @@
 // This component is used to add a new movie.
 // It supports both uploading image from PC and adding image link.
 
-import { useState } from "react";
+import { useState } from "react";// ustate hooks is used
 import "./App.css";
 
-function AddMovieForm({ onCancel, onSuccess }) {
+function AddMovieForm({ onCancel, onSuccess }) { // use state store the form inputs..
   // These are my input states for the form
   const [name, setName] = useState("");          // movie name
   const [type, setType] = useState("");          // release date / type
@@ -14,7 +14,7 @@ function AddMovieForm({ onCancel, onSuccess }) {
   const [selectedFile, setSelectedFile] = useState(null); // file from PC
 
   // This function will run when I submit the form
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { //function to check if the movie name is empty or not
     e.preventDefault(); // stop page refresh
 
     // Simple validation: movie name is required
@@ -24,7 +24,7 @@ function AddMovieForm({ onCancel, onSuccess }) {
     }
 
     try {
-      // I use FormData because I want to send both text fields and file
+      // formdata object append the fields
       const formData = new FormData();
       formData.append("name", name);
       formData.append("type", type);
@@ -72,7 +72,7 @@ function AddMovieForm({ onCancel, onSuccess }) {
 
         {/* Row 2 - type or release date input */}
         <div className="add-form-row mb-3">
-          <div className="add-form-label">Type:</div>
+          <div className="add-form-label">Released Date:</div>
           <input
             className="add-form-input"
             type="text"
@@ -88,7 +88,7 @@ function AddMovieForm({ onCancel, onSuccess }) {
           <div style={{ display: "flex", gap: "10px", width: "100%" }}>
             {/* Button style label to upload image from PC */}
             <label className="upload-btn">
-              Upload from pc
+              Browse from PC
               <input
                 type="file"
                 accept="image/*"

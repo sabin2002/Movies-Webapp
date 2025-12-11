@@ -59,7 +59,7 @@ function EditMovieForm({ movie, onCancel, onSuccess }) {
 
   return (
     <div className="add-form-wrapper">
-      <h1 className="text-center mb-4">Edit movie</h1>
+      <h1 className="text-center mb-4">Update movie</h1>
 
       <form onSubmit={handleSubmit}>
         {/* Row 1 - Movie name */}
@@ -75,7 +75,7 @@ function EditMovieForm({ movie, onCancel, onSuccess }) {
 
         {/* Row 2 - Type */}
         <div className="add-form-row mb-3">
-          <div className="add-form-label">Type:</div>
+          <div className="add-form-label">Released Date:</div>
           <input
             className="add-form-input"
             type="text"
@@ -91,7 +91,7 @@ function EditMovieForm({ movie, onCancel, onSuccess }) {
           <div style={{ display: "flex", gap: "10px", width: "100%" }}>
             {/* Upload from PC */}
             <label className="upload-btn">
-              Upload from pc
+              Browse from PC
               <input
                 type="file"
                 accept="image/*"

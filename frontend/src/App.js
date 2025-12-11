@@ -58,7 +58,7 @@ function App() {
     fetchMovies();
   }, []);
 
-  //function to delete movie
+  //function to delete movie...................................
   const deleteMovie = async (id) => {
     // First I show a confirmation popup so the user can cancel by mistake
     const confirmDelete = window.confirm("Are you sure you want to delete this movie?");
@@ -82,7 +82,7 @@ function App() {
       console.error("Error deleting movie:", err);
     }
   };
-
+//...............................
   // FUNCTION PART END
 
   // If showAddForm is true, I only show the AddMovieForm component
@@ -134,7 +134,7 @@ function App() {
       {/* Add button: this opens AddMovieForm when clicked */}
       <div className="mb-4">
         <button
-          className="btn btn-light border px-4 py-2 fs-4"
+          className="btn btn-dark border px-4 py-2 fs-4"
           onClick={() => setShowAddForm(true)}
         >
           Add
@@ -173,7 +173,7 @@ function App() {
                     className="btn btn-sm btn-primary px-3"
                     onClick={() => setEditingMovie(movie)}
                   >
-                    Edit
+                    Update
                   </button>
 
                   {/* Delete button */}
